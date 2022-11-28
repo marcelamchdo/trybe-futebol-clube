@@ -17,6 +17,11 @@ const editMatches = async (id: number) => {
   return { status: 200, message: { message: 'Finished' } };
 };
 
+const matchesUpdated = async (body: Matches, id: number) => {
+  await Matches.update({ ...body }, { where: { id } });
+  return { status: 200, message: { message: 'updated' } };
+};
+
 const insertMatches = async (
   homeTeam: number,
   awayTeam: number,
@@ -35,4 +40,4 @@ const insertMatches = async (
   return { status: 201, message: createMatches };
 };
 
-export default { matchesService, editMatches, insertMatches };
+export default { matchesService, editMatches, insertMatches, matchesUpdated };

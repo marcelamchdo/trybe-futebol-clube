@@ -25,6 +25,13 @@ const editMatches = async (req: Request, res: Response) => {
   return res.status(status).json(message);
 };
 
+const updatedMatches = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { body } = req;
+  const { status, message } = await MatchesService.matchesUpdated(body, Number(id));
+  return res.status(status).json(message);
+};
+
 const insertMatches = async (req: Request, res: Response) => {
   const { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals } = req.body;
   const token = req.headers.authorization;
@@ -46,4 +53,4 @@ const insertMatches = async (req: Request, res: Response) => {
   return res.status(createMatche.status).json(createMatche.message);
 };
 
-export default { matchesController, editMatches, insertMatches };
+export default { matchesController, editMatches, insertMatches, updatedMatches };

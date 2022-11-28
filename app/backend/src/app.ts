@@ -19,8 +19,9 @@ class App {
     this.app.get('/teams', TeamController.teamController);
     this.app.get('/teams/:id', TeamController.teamById);
     this.app.get('/matches', MatchesController.matchesController);
-    this.app.patch('/matches/:id/finish', MatchesController.editMatches);
     this.app.post('/matches', jwt.tokenValidate, MatchesController.insertMatches);
+    this.app.patch('/matches/:id', MatchesController.updatedMatches);
+    this.app.patch('/matches/:id/finish', MatchesController.editMatches);
   }
 
   private config():void {
