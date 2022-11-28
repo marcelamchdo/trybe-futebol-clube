@@ -2,6 +2,7 @@ import * as express from 'express';
 import UserController from './database/controllers/UserController';
 import TeamController from './database/controllers/TeamController';
 import MatchesController from './database/controllers/MatchesController';
+import jwt from './database/middlewares/jwt';
 
 class App {
   public app: express.Express;
@@ -18,6 +19,8 @@ class App {
     this.app.get('/teams', TeamController.teamController);
     this.app.get('/teams/:id', TeamController.teamById);
     this.app.get('/matches', MatchesController.matchesController);
+    this.app.patch('/matches/:id/finish', MatchesController.editMatches);
+    this.app.post('/matches', jwt.tokenValidate, MatchesController.insertMatches);
   }
 
   private config():void {
