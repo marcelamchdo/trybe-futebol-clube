@@ -1,13 +1,24 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+## ⚽ Trybe Futebol Clube
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+### <strong>💻 Sobre</strong>
+O TFC é um site informativo sobre partidas e classificações de futebol! O objetivo era desenvolver uma API e integra-la as aplicações para que funcionem consumindo um bando de dados.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Nesse projeto, foi construido um back-end dockerizado utilizando modelagem de dados através do Sequelize. Seu desenvolvimento foi respeitar regras de negócio providas no projeto e a API foi capaz de ser consumida por um front-end já provido nesse projeto. Nesse projeto, fui capaz de:
+
+Realizar a dockerização dos apps, network, volume e compose;
+Modelar dados com MySQL através do Sequelize;
+Criar e associar tabelas usando models do sequelize;
+Construir uma API REST com endpoints para consumir os models criados;
+Fazer um CRUD utilizando ORM;
+
+---
+
+### <strong>📔 Habilidades</strong>
+
+- Realizar a dockerização dos apps, network, volume e compose;
+- Modelar dados com MySQL através do Sequelize;
+- Criar e associar tabelas usando models do sequelize;
+- Construir uma API REST com endpoints para consumir os models criados;
+- Fazer um CRUD utilizando ORM;
+---
+
