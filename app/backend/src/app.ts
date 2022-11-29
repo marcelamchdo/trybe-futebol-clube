@@ -3,6 +3,7 @@ import UserController from './database/controllers/UserController';
 import TeamController from './database/controllers/TeamController';
 import MatchesController from './database/controllers/MatchesController';
 import jwt from './database/middlewares/jwt';
+import LeaderboardController from './database/controllers/LeaderboardController';
 
 class App {
   public app: express.Express;
@@ -22,6 +23,7 @@ class App {
     this.app.post('/matches', jwt.tokenValidate, MatchesController.insertMatches);
     this.app.patch('/matches/:id', MatchesController.updatedMatches);
     this.app.patch('/matches/:id/finish', MatchesController.editMatches);
+    this.app.get('/leaderboard/home', LeaderboardController.leaderboardController);
   }
 
   private config():void {
